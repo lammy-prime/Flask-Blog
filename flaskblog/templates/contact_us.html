@@ -1,0 +1,55 @@
+{%   extends "layout.html"   %}
+{%   block content   %}
+    <div class="content-section">
+        <form action="" method="">
+            {{  form.hidden_tag()    }}
+            <fieldset class="form-group">
+                <legend class="border-bottom">
+                    Contact Us <br>
+Feel free to drop us a line below!
+                </legend>
+                <div class="form-group">
+                    {{  form.fullname.label(class="form-control-label")    }}
+                    
+                    
+                   
+                    {{  form.fullname(class="form-control form-control-lg")    }}
+                    
+                </div>
+                <div class="form-group">
+                    {{  form.email.label(class="form-control-label")    }}
+                    
+                    
+                 
+                    {{  form.email(class="form-control form-control-lg")    }}
+                   
+                </div>
+                
+                <div class="form-group">
+                    {{  form.phonenumber.label(class="form-control-label")    }}
+                    
+                    
+                   
+                    {{  form.phonenumber(class="form-control form-control-lg")    }}
+                   
+                </div>
+                <div class="form-group">
+                    {{  form.comment.label(class="form-control-label")    }}
+                                 <textarea class="form-control form-control-lg" id="content" name="content" required=""></textarea>
+
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{    form.submit(class="btn btn-outline-info")      }}
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a href="{{  url_for('login')  }}" class="ml-2">Sign In</a>
+            </small>
+        </div> 
+    </div>
+{%   endblock content   %}
+    
+
